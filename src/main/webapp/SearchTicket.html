@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alibaba</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="background-color: darkcyan">
+<div style="background-color: #FFFFFF ; text-align:center; padding: 15px ; width: 50% ; margin: auto">
+    <form action="searchTicket" method="post">
+        <h1>OnlineSearching</h1>
+        <label>
+            <input class="input" type="date" name="date" placeholder="date" required="required" />
+            <input class="input" list="city" name="initPoint" placeholder="initPoint"  required="required">
+            <datalist id="city">
+                <option value="tehran">
+                <option value="kashan">
+                <option value="esfehan">
+                <option value="shiraz">
+                <option value="tabriz">
+            </datalist>
+            <input class="input" list="city" name="destination" placeholder="destination"  required="required">
+        </label>
+
+        <button class="button" type="submit">SearchOnline</button>
+
+    </form>
+</div>
+</body>
+</html>

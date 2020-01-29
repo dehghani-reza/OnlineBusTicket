@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="background-color: darkcyan">
+<div>
+    <div class="form">
+        <form method="post" action="signup">
+            <h1>SignUp</h1>
+            <label>
+                <input type="text" name="firstName" placeholder="FirstName" maxlength="25" required="required"/>
+                <input type="text" name="lastName" placeholder="LastName" maxlength="25" required="required"/>
+
+                <input type="text" name="nationalId" placeholder="National-ID" maxlength="10" minlength="10"
+                       required="required"/>
+                <input type="email" name="email" placeholder="EmailAddress" maxlength="25" required="required"/>
+                <input type="password" name="password" placeholder="password" maxlength="25" minlength="8"
+                       required="required"/>
+
+                <input style="width: 20%;" type="radio" name="gender" value="Man" checked> Male
+                <input style="width: 20%;" type="radio" name="gender" value="Woman"> Female
+
+
+            </label>
+
+            <button type="submit">Submit</button>
+
+
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

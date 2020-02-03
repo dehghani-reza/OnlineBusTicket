@@ -17,22 +17,22 @@ import java.util.Objects;
 public class Trip {
 
     @Id
-    @Column(unique = true , nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
 
-    @Column(name = "destination" , nullable = false)
+    @Column(name = "destination", nullable = false)
     private String destination;
 
-    @Column(name = "initialpoint" , nullable = false)
+    @Column(name = "initialpoint", nullable = false)
     private String initialPoint;
 
-    @Column(name = "date" ,nullable = false)
+    @Column(name = "date", nullable = false)
     private String date;
 
-    @Column(name = "time" ,nullable = false)
+    @Column(name = "time", nullable = false)
     private String time;
 
-    @Column(name = "capacity" , nullable = false)
+    @Column(name = "capacity", nullable = false)
     private Long capacity;
 
     @OneToMany(mappedBy = "trip")

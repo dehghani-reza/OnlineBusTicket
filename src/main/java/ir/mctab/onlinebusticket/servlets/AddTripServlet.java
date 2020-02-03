@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "addTrip", urlPatterns = "/addtrip")
+@WebServlet(name = "addTrip", urlPatterns = "/secure/addtrip")
 public class AddTripServlet extends HttpServlet {
     TripDAO tripDAO = new TripDAO();
 
@@ -21,11 +21,9 @@ public class AddTripServlet extends HttpServlet {
         String initPoint = req.getParameter("initPint");
         String destination = req.getParameter("destination");
         String time = req.getParameter("time");
-        Long tripId = Long.valueOf(req.getParameter("tripId"));
         Long capacity = Long.valueOf(req.getParameter("capacity"));
 
         Trip trip = new Trip();
-        trip.setId(tripId);
         trip.setDate(date);
         trip.setDestination(destination);
         trip.setInitialPoint(initPoint);
@@ -36,6 +34,7 @@ public class AddTripServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.println("successful");
+        resp.sendRedirect("SearchTicket.html");
 
     }
 }

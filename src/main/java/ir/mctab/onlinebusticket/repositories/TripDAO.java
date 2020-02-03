@@ -4,6 +4,8 @@ import ir.mctab.onlinebusticket.entities.Trip;
 import org.hibernate.query.Query;
 
 import javax.xml.crypto.dsig.spec.TransformParameterSpec;
+import java.time.LocalTime;
+import java.util.Collections;
 import java.util.List;
 
 public class TripDAO extends CrudRepository<Trip,Long> {

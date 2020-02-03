@@ -6,6 +6,7 @@ import org.hibernate.query.Query;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map.Entry;
 
 public abstract class CrudRepository<Entity, ID extends Serializable> {
 

@@ -42,7 +42,7 @@ public class SignUpServlet extends HttpServlet {
             return;
         }
         PrintWriter out = resp.getWriter();
-        out.println(user);
+        resp.sendRedirect("index.html");
 
     }
 }

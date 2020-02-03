@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: darkcyan">
 <div style="background-color: #FFFFFF ; text-align:center; padding: 15px ; width: 50% ; margin: auto">
-    <form action="addtrip" method="post">
+    <form action="secure/addtrip" method="post">
         <h1>AddTrip</h1>
         <label>
             <input class="input" type="date" name="date" placeholder="date" required="required" />
@@ -20,7 +20,6 @@
                 <option value="tabriz">
             </datalist>
             <input class="input" list="city" name="destination" placeholder="destination"  required="required">
-            <input class="input" type="number"  name="tripId" placeholder="tripId"  required="required">
             <input class="input" type="number"  name="capacity" placeholder="capacity"  required="required">
             <input class="input" type="time"  name="time" placeholder="time"  required="required">
         </label>

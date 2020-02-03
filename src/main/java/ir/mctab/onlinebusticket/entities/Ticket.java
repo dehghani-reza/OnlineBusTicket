@@ -18,15 +18,21 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ticketId")
-    private String ticketId;
+    private Long ticketId;
 
     @ManyToOne
     @JoinColumn(name = "userId")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "tripId")
     private Trip trip;
+
+    @Column(nullable = false)
+    private String buyerName;
+
+    @Enumerated(EnumType.STRING)
+    private Gender buyerGender;
 
     @Override
     public boolean equals(Object o) {
@@ -46,6 +52,7 @@ public class Ticket {
         return "Ticket{" +
                 "ticketId='" + ticketId + '\'' +
                 ", trip=" + trip +
+                ", buyerName='" + buyerName + '\'' +
                 '}';
     }
 }
